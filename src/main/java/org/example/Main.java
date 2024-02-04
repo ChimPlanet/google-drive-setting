@@ -94,7 +94,9 @@ public class Main {
             File file = service.files().create(fileMetadata)
                     .setFields("id")
                     .execute();
-            System.out.println("application.properties 파일의 log_dir_id에 들어갈 내용 : \n" + file.getId());
+            System.out.println("============================================");
+            System.out.println("application.properties 파일의 log_dir_id에 들어갈 내용 : " + file.getId());
+            System.out.println("============================================");
         } catch (GoogleJsonResponseException e) {
             // TODO(developer) - handle error appropriately
             System.err.println("Unable to create folder: " + e.getDetails());
